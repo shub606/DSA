@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // "." & [Array mai  pallandrome nhi aa rahe hai ]
+    function pallan(str1) {
+      let str = str1.toLowerCase();
+
+      let string = str.split(" ");
+      let revstr = "";
+      let lrcount = 0;
+      let largeststr = "";
+      let pallandr = [];
+      for (i = 0; i < string.length; i++) {
+        // console.log(string[i]);
+        revstr = "";
+        for (j = string[i].length - 1; j >= 0; j--) {  
+          if (string[i][j] != ",") {
+            revstr = revstr + string[i][j] + "";
+
+            //   console.log(string[i]);
+          }
+        }
+        //  console.log(revstr);
+
+        if (string[i] == revstr) {     //Compairing string with reverse string
+          //  pallandr.push(string[i]);
+          if (lrcount < string[i].length) {
+            lrcount = string[i].length;
+            largeststr = string[i];
+          }
+        }
+      }
+
+      // console.log(string);
+      console.log(largeststr);  // showing largest pallandrom
+      // console.log(pallandr);
+    }
+
+    pallan("Hello Mam, how are you. Madam, do you know racecar");
+  </script>
+</html>
