@@ -14,20 +14,41 @@
 </html>
 <script>
 
-function pair(array,x){
+  // To find a first pair from a number array whose sum is  X = 5
+// function pair(array,x){
 
+//   for(let i= 0; i<array.length;i++){
+//     //  console.log(a);
+//     for(let j = i; j<array.length; j++){
+//       if(array[i]+ array[j]== x){
+
+//         console.log(array[i],array[j]);
+//       }
+//     }
+    
+//   }
+
+// };
+
+  
+//  To find a first three elements from a number array whose sum is X = 6
+  
+  function pair(array,x){
   for(let i= 0; i<array.length;i++){
     //  console.log(a);
     for(let j = i; j<array.length; j++){
-      if(array[i]+ array[j]== x){
-
-        console.log(array[i],array[j]);
+      for(let k = j; k<array.length; k++){
+         
+            if(array[i]+ array[j]+ array[k] == x)
+            {
+          console.log(array[i],array[j],array[k]);
+          }
       }
+      
     }
     
   }
 
 };
-
 pair([1,2,3,4,5],5);
 </script>
